@@ -9,12 +9,12 @@ class GetCheckedVisitors {
         try {
             const namesResponse = await sheets.spreadsheets.values.get({
                 spreadsheetId: process.env.SHEET_ID,
-                range: "Respostas!B2:B349"
+                range: "Respostas!B2:B327"
             });
 
             const checkInResponse = await sheets.spreadsheets.values.get({
                 spreadsheetId: process.env.SHEET_ID,
-                range: "Respostas!L2:L349"
+                range: "Respostas!L2:L327"
             })
 
             const nameRows = namesResponse.data.values;

@@ -13,11 +13,7 @@ filtroVisitante.addEventListener('input', function() {
             .normalize('NFD')
             .replace(/[\u0300-\u036f]/g, "");
 
-        const nomeSeparado = nomeCompleto.split(' ');
-
-        const encontrado = nomeSeparado.some(parte => parte.startsWith(filtro));
-
-        if (encontrado) {
+        if (nomeCompleto.startsWith(filtro)) {
             visitante.style.display = '';
         } else {
             visitante.style.display = 'none';

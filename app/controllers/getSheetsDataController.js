@@ -9,17 +9,17 @@ class GetSheetData {
         try {
             const namesResponse = await sheets.spreadsheets.values.get({
                 spreadsheetId: process.env.SHEET_ID,
-                range: "Respostas!B2:B349"
+                range: "Respostas!B2:B327"
             });
 
             const checkInResponse = await sheets.spreadsheets.values.get({
                 spreadsheetId: process.env.SHEET_ID,
-                range: "Respostas!L2:L349"
+                range: "Respostas!L2:L327"
             })
 
             const filaResponse = await sheets.spreadsheets.values.get({
                 spreadsheetId: process.env.SHEET_ID,
-                range: "Respostas!K2:K349"
+                range: "Respostas!K2:K327"
             })
 
             const nameRows = namesResponse.data.values;
