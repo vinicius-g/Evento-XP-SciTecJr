@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    font-size: inherit;
+    font-family: 'Rubik', sans-serif;
+}
+
+:root {
+    font-size: 16px;
+    --scitec: #7543C2;
+    --scitec-hover: #472777;
+}
+
+#container {
+    max-width: 600px;
+    margin-top: 40px;
+    margin-inline: auto;
+    padding-inline: 20px;
+}
+
+#container > h1 {
+    margin-bottom: 12px;
+    font-size: 2rem;
+}
+
+#container #filtrar {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    padding-left: 8px;
+    border: 2px solid var(--scitec);
+    border-radius: 4px;
+}
+
+#container > h2 {
+    margin-bottom: 12px;
+    font-size: 1.75rem;
+}
+
+#container #filas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+#container #filas > div {
+    min-width: max-content;
+    border-radius: 4px;
+    background-color: var(--scitec);
+    color: white;
+}
+
+#container #filas > div:hover {
+    background-color: var(--scitec-hover);
+}
+
+#container #filas a {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+}
+
+#visitantes > div {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid black;
+}
+
+#visitantes > div span {
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+#visitantes > div button {
+    min-width: max-content;
+    padding: 12px;
+    background-color: var(--scitec);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+#visitantes > div button:hover {
+    background-color: var(--scitec-hover);
+}

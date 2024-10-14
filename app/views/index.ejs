@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento XP SciTec Jr.</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style/style.css">
+    <script src="./js/filtrar_visitantes.js" defer></script>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Lista de visitantes</h1>
+
+        <input type="text" autocomplete="off" name="nome" id="filtrar" placeholder="Pesquisar...">
+
+        <h2>Selecionar fila:</h2>
+
+        <div id="filas">
+            <% filas.forEach(fila => { %>
+                <div>
+                    <span><a href="/<%- fila %>"><%- fila %></a></span>
+                </div>
+            <% }); %>
+        </div>
+
+        <div id="visitantes">
+            <% visitantes.forEach(visitante => {
+                if (visitante.checkIn != "Sim") { %>
+                <div>
+                    <span><%- visitante.nome %></span>
+                    <form action="/check-in/<%- visitante.id %>/<%- filaSelecionada %>" method="get"><button id="">Check-in</button></form>
+                </div>
+            <%  }
+              }); %>
+        </div>
+    </div>
+</body>
+
+</html>
