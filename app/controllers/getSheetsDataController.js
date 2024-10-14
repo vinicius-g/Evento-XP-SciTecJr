@@ -28,6 +28,7 @@ class GetSheetData {
 
             const filas = Array.from(new Set(filaRows.flat()));
             const visitantes = [];
+            const visitantesChecked = checkInRows.filter(checked => checked == "Sim").length;
 
             let i = 0;
 
@@ -38,7 +39,7 @@ class GetSheetData {
                 i++;
             });
 
-            return res.render("index.ejs", {visitantes, filas: filas.filter(fila => fila !== filaSelecionada), filaSelecionada});
+            return res.render("index.ejs", {visitantes, filas: filas.filter(fila => fila !== filaSelecionada), filaSelecionada, visitantesChecked});
         } catch (error) {
             console.error('Erro: ', error);
 
