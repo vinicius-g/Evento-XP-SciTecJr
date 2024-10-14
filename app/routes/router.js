@@ -5,6 +5,10 @@ const getSheetDataController = require("../controllers/getSheetsDataController")
 const updateSheetDataController = require("../controllers/updateSheetDataController");
 const getCheckedVisitorsController = require("../controllers/getCheckedVisitorsController");
 
+router.get("/", (req, res) => {
+    res.redirect("/A-B");
+})
+
 router.get("/:fila", async (req, res) => {
     await getSheetDataController.render(req, res)
 });
